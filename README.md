@@ -40,6 +40,12 @@ Interview questions
   Before being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].</br>
   Given the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.</br>
   You must decrease the overall operation steps as much as possible.</br>
+  <b>Binary search. There are 4 conditions where binary search is possible:
+       - nums[l] <= target && target < nums[m]
+       - nums[m] < target && target <= nums[r]
+       - nums[m] > nums[r] && nums[m] < target
+       - nums[l] > nums[m] && nums[m] > target
+    If any of these conditions are met, it is possible to reduce search space to half. If not, search on both sides.</b>
 
 
 
