@@ -61,6 +61,20 @@ Interview questions
   Example 3:</br>
   Input: s = ""</br>
   Output: 0</br>
+  <b>Two ways:</br>
+    1. Using stack while iterating over the string. Push -1 on stack before iteration. If next char is (, push its index on the stack. If next char is ), if stack top points to (, pop from stack and maxLen is max(maxLen, i-stacktop), else push char index on stack.</br>
+    2. Without stack - Iterating forward over the string, count '(' and ')'. If num '('s == num ')'s, maxLen = max(maxLen, 2*num '('s) else if num ')'s > num '('s, reset num '('s and ')'s. Do same iterating backward over string except check if num ')'s < num '('s.</b></br>
 
+- https://leetcode.com/problems/find-the-duplicate-number/</br>
+  Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.</br>
+  There is only one repeated number in nums, return this repeated number.</br>
+  You must solve the problem without modifying the array nums and uses only constant extra space.</br>
+  Example 1:</br>
+  Input: nums = [1,3,4,2,2]</br>
+  Output: 2</br>
+  Example 2:</br>
+  Input: nums = [3,1,3,4,2]</br>
+  Output: 3</br>
+  <b>Rabbit-hare linked list solution</b></br>
 
 
