@@ -61,7 +61,7 @@ Interview questions
   Example 3:</br>
   Input: s = ""</br>
   Output: 0</br>
-  <b>Two ways:</br>
+  <b>Two ways:
     1. Using stack while iterating over the string. Push -1 on stack before iteration. If next char is (, push its index on the stack. If next char is ), if stack top points to (, pop from stack and maxLen is max(maxLen, i-stacktop), else push char index on stack.</br>
     2. Without stack - Iterating forward over the string, count '(' and ')'. If num '('s == num ')'s, maxLen = max(maxLen, 2*num '('s) else if num ')'s > num '('s, reset num '('s and ')'s. Do same iterating backward over string except check if num ')'s < num '('s.</b></br>
    https://github.com/mshenoy2481/interview_qs/blob/master/leetcode32.cpp</br>
