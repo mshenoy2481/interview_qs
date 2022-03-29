@@ -64,7 +64,7 @@ Interview questions
   <b>Two ways:</br>
     1. Using stack while iterating over the string. Push -1 on stack before iteration. If next char is (, push its index on the stack. If next char is ), if stack top points to (, pop from stack and maxLen is max(maxLen, i-stacktop), else push char index on stack.</br>
     2. Without stack - Iterating forward over the string, count '(' and ')'. If num '('s == num ')'s, maxLen = max(maxLen, 2*num '('s) else if num ')'s > num '('s, reset num '('s and ')'s. Do same iterating backward over string except check if num ')'s < num '('s.</b></br>
-  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode32.cpp</br>
+   https://github.com/mshenoy2481/interview_qs/blob/master/leetcode32.cpp</br>
 
 - https://leetcode.com/problems/find-the-duplicate-number/</br>
   Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.</br>
