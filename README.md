@@ -48,5 +48,19 @@ Interview questions
     If any of these conditions are met, it is possible to reduce search space to half. If not, search on both sides.</b></br>
     https://github.com/mshenoy2481/interview_qs/blob/master/leetcode81.cpp</br>
 
+- https://leetcode.com/problems/longest-valid-parentheses/</br>
+  Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.</br>
+  Example 1:</br>
+  Input: s = "(()"</br>
+  Output: 2</br>
+  Explanation: The longest valid parentheses substring is "()".</br>
+  Example 2:</br>
+  Input: s = ")()())"</br>
+  Output: 4</br>
+  Explanation: The longest valid parentheses substring is "()()".</br>
+  Example 3:</br>
+  Input: s = ""</br>
+  Output: 0</br>
+
 
 
