@@ -28,9 +28,9 @@ Interview questions
   <b>Rabbit-hare linked list solution</b></br>
   https://github.com/mshenoy2481/interview_qs/blob/master/leetcode287.cpp</br>
 
-- https://leetcode.com/problems/handshakes-that-dont-cross/
+- https://leetcode.com/problems/handshakes-that-dont-cross/</br>
   <b>DP bottom up:</br>
-     for(int i = 1;  i <= numPeople/2;     i++)  {</br>
+      for(int i = 1;  i <= numPeople/2;     i++)  {</br>
             for(int j = 1;  j <= i;     j++) {</br>
                 dp[i] = dp[i] + dp[i-j]*dp[i-j];</br>
       }}</br></b>
