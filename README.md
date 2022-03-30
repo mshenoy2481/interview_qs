@@ -36,5 +36,8 @@ Interview questions
       }}</br></b>
       https://github.com/mshenoy2481/interview_qs/blob/master/leetcode1259.cpp</br>
   
+  -https://leetcode.com/problems/one-edit-distance/</br>
+  <b>Simple two pointer O(n) solution<b></br>
+  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode161.cpp</br>
 
 
