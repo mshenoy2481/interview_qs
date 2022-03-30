@@ -54,5 +54,8 @@ Interview questions
             } } }</br></b>
     https://github.com/mshenoy2481/interview_qs/blob/master/leetcode72.cpp</br>
 
+- https://leetcode.com/problems/longest-palindromic-substring/</br>
+  <b>Check for the longest palindrome at every index using the "blooming" technique. The largest of these is the answer.</b></br>
+  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode5.cpp</br>
 
 
