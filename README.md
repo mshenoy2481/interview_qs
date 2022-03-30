@@ -51,9 +51,7 @@ Interview questions
             } else {</br>
                 dp[ind1][ind2] = min(dp[ind1+1][ind2+1], dp[ind1+1][ind2], dp[ind1][ind2+1]);</br>
                 dp[ind1][ind2]++;</br>
-            }</br>
-        }</br>
-    }</br></b>
+            } } }</br></b>
     https://github.com/mshenoy2481/interview_qs/blob/master/leetcode72.cpp</br>
 
 
