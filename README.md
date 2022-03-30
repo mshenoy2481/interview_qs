@@ -40,4 +40,21 @@ Interview questions
   <b>Simple two pointer O(n) solution<b></br>
   https://github.com/mshenoy2481/interview_qs/blob/master/leetcode161.cpp</br>
 
+- https://leetcode.com/problems/edit-distance/</br>
+  <b>DP solution. At every index combination, one of the following happens:</br>
+     1.letters are the same, in which case number of operations are not incremented and both indices are incremented.</br>
+     2.else, pick the minimum of the following: insert word2 letter, in which case word2 index increases, replace word1 letter by word2 letter in which case both indexes increment or delete word1 letter in which case word1 index increases. In all cases, number of operations are incremented by 1.</br>
+    for(int ind1 = word1.length()-1;   ind1 >= 0;      ind1--){</br>
+        for(int ind2 = word2.length()-1;   ind2 >= 0;      ind2--){</br>
+            if(word1[ind1] == word2[ind2]){</br>
+                dp[ind1][ind2] = dp[ind1+1][ind2+1];</br>
+            } else {</br>
+                dp[ind1][ind2] = min(dp[ind1+1][ind2+1], dp[ind1+1][ind2], dp[ind1][ind2+1]);</br>
+                dp[ind1][ind2]++;</br>
+            }</br>
+        }</br>
+    }</br></b>
+    https://github.com/mshenoy2481/interview_qs/blob/master/leetcode72.cpp</br>
+
+
 
