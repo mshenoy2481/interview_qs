@@ -25,22 +25,24 @@ int getNextLongest(const std::string& text1, const std::string& text2, int ind1,
 }
 
 int longestCommonSubsequence(std::string text1, std::string text2) {
-    std::vector<std::vector<int>> dp(text1.length()+1, std::vector<int>(text2.length()+1, 0));
+    std::vector<int> dp(text2.length()+1, 0);
+    std::vector<int> nextDp(text2.length()+1, 0);
     for(int i = text1.length()-1;  i >= 0;      i--)
     {
         for(int j = text2.length()-1;   j >= 0;     j--)
         {
             if(text1[i] == text2[j])
             {
-                dp[i][j] = 1 + dp[i+1][j+1];
+                dp[j] = 1 + nextDp[j+1];
             }
             else
             {
-                dp[i][j] = std::max(dp[i][j+1], dp[i+1][j]);
+                dp[j] = std::max(dp[j+1], nextDp[j]);
             }
         }
+        nextDp = dp;
     }
-    return dp[0][0];
+    return dp[0];
 }
 
 int main()
