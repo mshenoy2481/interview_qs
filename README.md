@@ -99,7 +99,7 @@ Interview questions
             } else if(prevMin2Ind != -1)  {</br>
                 currVal += prevMin2;</br>
             }</br>
-        ------</br>
+        ------</b></br>
     https://github.com/mshenoy2481/interview_qs/blob/master/leetcode265.cpp</br>
 
 
