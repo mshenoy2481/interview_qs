@@ -58,4 +58,50 @@ Interview questions
   <b>Check for the longest palindrome at every index using the "blooming" technique. The largest of these is the answer.</b></br>
   https://github.com/mshenoy2481/interview_qs/blob/master/leetcode5.cpp</br>
 
+- https://leetcode.com/problems/longest-common-subsequence/</br>
+  <b>Classic DP problem. Iterate over both strings. For every index combo(i,j), if the the chars is both strings are same, increment size of the subsequence, else subsequence size = max(subsequence(i+1, j), subsequenc(i, j+1))</br>
+     for(int i = text1.length()-1;  i >= 0;      i--)  {</br>
+        for(int j = text2.length()-1;   j >= 0;     j--) {</br>
+                if(text1[i] == text2[j]) {</br>
+                    dp[i][j] = 1 + dp[i+1][j+1];</br>
+                } else {</br>
+                    dp[i][j] = max(dp[i][j+1], dp[i+1][j]);</br>
+                }</br>
+            }</br>
+        }</br></b>
+  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode1143.cpp</br>
+
+- https://leetcode.com/problems/longest-palindromic-subsequence/</br>
+  <b>Same problem as ablove (longest common subsequence). Inputs are string and reverse string.</b></br>
+  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode1143.cpp</br>
+
+- https://leetcode.com/problems/valid-palindrome-iii/</br>
+  <b>Find the length of the longest palindrome subsequence using longest common subsequence technique. Answer is (size of the string - this length) >= k.</b></br>
+  https://github.com/mshenoy2481/interview_qs/blob/master/leetcode1216.cpp</br>
+  
+- https://leetcode.com/problems/paint-house-ii/</br>
+  <b>Two ways to solve this:</br> 
+     1. DP+backtracking - Top down recursion. For every recursion, iterate over all colors. For every color index, mark the color index for the next house as -1 and calculate the minimum cost. Backtrack on the color index.</br>
+       if(ind < costs.size()-1) {</br>
+           temp = costs[ind+1][i];</br>
+           costs[ind+1][i] = -1;</br>
+       }</br>
+       dp[ind][i] = costs[ind][i] + tryNextCost(costs, ind+1, dp);</br>
+       if(ind < costs.size()-1)  {</br>
+           costs[ind+1][i] = temp;</br>
+       }</br>
+     2. Simple DP. At every iteration, find the minimum and second minimum value and use those values in the next iteration.</br>
+        -----</br>
+        for(int j = 0;  j < costs[i].size();    j++)  {</br>
+            int currVal = costs[i][j];</br>
+            if(prevMinInd != -1 && j != prevMinInd)  {</br>
+                currVal += prevMin;</br>
+            } else if(prevMin2Ind != -1)  {</br>
+                currVal += prevMin2;</br>
+            }</br>
+        ------</br>
+    https://github.com/mshenoy2481/interview_qs/blob/master/leetcode265.cpp</br>
+
+
+
 
