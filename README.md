@@ -102,6 +102,11 @@ Interview questions
         ------</b></br>
     https://github.com/mshenoy2481/interview_qs/blob/master/leetcode265.cpp</br>
 
-
+- https://leetcode.com/problems/minimize-max-distance-to-gas-station/</br>
+  <b>Two ways to do this:</br>
+     1. Heap: Throw all the differences between consecutive stations and number of gas stations in between (starting with 0) on the priority_queue. priotrity_queue ordered by (distance/number of stations in between) While k > 0, pop the next (distance, station nums) off the front of the priority_queue, decrement k, increment the station nums in the popped element and push the popped element back on the queue.</br>
+     2. Binary search: Search space is 1e-6 to largest distance between consecutive stations. In this search space, search for the minimum max distance such that k gas stations can be placed in between. To do this, find the mid and find the number of stations that can be placed for this mid (iterate over the station array, divide the distance between consective distances by the mid to find the number of stations that can be placed in between and add to the total). If these total number of stations > k, mid is too small as the max distance and search space is [mid+1e-6, r] else search space is [l, mid].</br>
+    https://github.com/mshenoy2481/interview_qs/blob/master/leetcode774.cpp</br>
+   
 
 
